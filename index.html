@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mandy Wagner | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --beige: #f5f3ef;
+      --green: #6e8b63;
+      --dark: #2b2b2b;
+      --font-heading: 'Libre Baskerville', serif;
+      --font-body: 'Work Sans', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--beige);
+      color: var(--dark);
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: var(--green);
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      color: var(--green);
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--green);
+      padding-bottom: 0.5rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery a {
+      display: block;
+      text-decoration: none;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .etsy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .etsy-box {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .etsy-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .etsy-preview {
+      width: 100%;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .etsy-box a {
+      display: inline-block;
+      background-color: var(--green);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 0.5rem;
+      transition: background-color 0.3s;
+    }
+
+    .etsy-box a:hover {
+      background-color: #5c7855;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+    h3 {
+    color: var(--green);
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+  }
+
+  section#resume {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+
+  section#resume ul {
+    margin-left: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  section#resume p,
+  section#resume li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  section#resume p strong {
+    color: var(--green);
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Mandy Wagner</h1>
+    <p>Graphic Designer | Brand Specialist | Developer</p>
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+  <div class="etsy-grid">
+    <div class="etsy-box">
+      <div class="etsy-preview" style="background-image: url('images/apparel1.jpg');"></div>
+      <h3>Apparel Design</h3>
+      <p>Custom artwork and illustrations featured on wearable goods and fashion accessories.</p>
+      <a href="apparel.html">View Work</a>
+    </div>
+    <div class="etsy-box">
+      <div class="etsy-preview" style="background-image: url('images/branding1.jpg');"></div>
+      <h3>Events</h3>
+      <p>Designs for event signage, promotions, and custom branded materials for pop-ups and markets.</p>
+      <a href="branding.html">View Work</a>
+    </div>
+    <div class="etsy-box">
+      <div class="etsy-preview" style="background-image: url('images/font1.jpg');"></div>
+      <h3>Logos</h3>
+      <p>Distinctive logo marks designed to anchor brand identity and recall.</p>
+      <a href="product-labels.html">View Work</a>
+    </div>
+    <div class="etsy-box">
+      <div class="etsy-preview" style="background-image: url('images/linework1.jpg');"></div>
+      <h3>Linework Art</h3>
+      <p>Delicate illustrations and digital line drawings used for prints, logos, and decor.</p>
+      <a href="linework.html">View Work</a>
+    </div>
+    <div class="etsy-box">
+      <div class="etsy-preview" style="background-image: url('images/poster1.jpg');"></div>
+      <h3>Posters</h3>
+      <p>Creative poster layouts for promotions, events, and wall art collections.</p>
+      <a href="posters.html">View Work</a>
+    </div>
+    <div class="etsy-box">
+      <div class="etsy-preview" style="background-image: url('images/product1.jpg');"></div>
+      <h3>Products</h3>
+      <p>Designs applied to real and mockup product applications across industries.</p>
+      <a href="products.html">View Work</a>
+    </div>
+    <div class="etsy-box">
+      <div class="etsy-preview" style="background-image: url('images/sticker1.jpg');"></div>
+      <h3>Stickers</h3>
+      <p>High-quality vinyl and digital sticker design, print-ready and customizable.</p>
+      <a href="stickers.html">View Work</a>
+    </div>
+    <div class="etsy-box">
+      <div class="etsy-preview" style="background-image: url('images/logo1.jpg');"></div>
+      <h3>Product Labels</h3>
+      <p>Regulation-compliant and visually engaging product packaging and label design.</p>
+      <a href="logos.html">View Work</a>
+    </div>
+    <div class="etsy-box">
+      <div class="etsy-preview" style="background-image: url('images/event1.jpg');"></div>
+      <h3>Branding</h3>
+      <p>Complete identity kits including logos, typography, colors, and collateral.</p>
+      <a href="events.html">View Work</a>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <section id="resume">
+  <h2>Resume</h2>
+  <p><strong>Name:</strong> Mandy Wagner</p>
+  <p><strong>Location:</strong> Winter Park, FL</p>
+  <p><strong>Email:</strong> mandy.wagner.m@gmail.com</p>
+  <p><strong>Phone:</strong> (715) 495-2369</p>
+  <p><strong>Website:</strong> <a href="http://www.MandyWagner.Me">www.MandyWagner.Me</a></p>
+  <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mandymwagner">linkedin.com/in/mandymwagner</a></p>
+
+  <h3>Remote Graphic Designer / UI-UX Designer</h3>
+  <p>Multi-disciplinary designer with 10+ years of experience delivering impactful visual solutions for brands, digital products, and print materials. Adept at creating cohesive user interfaces, scalable brand systems, and engaging visual content across platforms. Strong foundation in software development principles and a proven ability to self-manage and deliver on deadline in remote work environments.</p>
+
+  <h3>Core Skills & Tools</h3>
+  <ul>
+    <li>Branding & Visual Identity Systems</li>
+    <li>Print, Digital & Packaging Design</li>
+    <li>Responsive Web Design (WIX, WordPress, HTML/CSS)</li>
+    <li>Ecommerce & POS Systems</li>
+    <li>Cross-Industry Label Compliance (Alcohol, Cannabis, Personal Care Industry)</li>
+    <li>Adobe Creative Suite (Photoshop, Illustrator, InDesign, Lightroom)</li>
+    <li>Canva, CorelDRAW, 3DS Max</li>
+    <li>Microsoft Office Suite, Google Workspace</li>
+    <li>Project Management: Trello, Slack</li>
+  </ul>
+
+  <h3>Professional Experience</h3>
+      
+  <p><strong>Verizon Wireless – Sales / Graphic Designer / Software Development Support</strong><br />2019–2021</p>
+  <ul>
+    <li>Created internal visual assets for promotions, presentations, and sales materials.</li>
+    <li>Edited UI copy, graphics, and structure for internal tools and customer-facing web portals.</li>
+  </ul> 
+      
+  <p><strong>Tangled Up In Hue – Graphic Designer / Web Developer / Assistant Manager</strong><br />2016–2019</p>
+  <ul>
+    <li>Led brand refresh and digital asset creation during major expansion.</li>
+    <li>Developed a new wholesale website and built internal inventory/label tracking systems.</li>
+    <li>Oversaw front-end UI improvements across digital interfaces and sales tools.</li>
+  </ul>
+     
+      
+  <p><strong>Freelance Graphic Designer / Developer & Brand Strategist – MWDesigns</strong><br />2016–Present (Remote)</p>
+  <ul>
+    <li>Design and audit full brand identities and UI mockups for startups and small businesses across the U.S.</li>
+    <li>Build marketing assets, eCommerce websites, and social content for clients in industries such as apparel, services, and retail.</li>
+    <li>Deliver client-ready tools including POS templates, product packaging, contract systems, client colateral, websites, product designs, and launch graphics.</li>
+    <li>Conduct design audits and provid consultations for entrepreneurs navigating startup and scaling phases.</li>
+  </ul>
+
+
+
+
+  <h3>Independent Design Brands (Entrepreneurship)</h3>
+  <ul>
+    <li><strong>ThePennyCo</strong> — Owner / Designer | 2018–Present<br />Custom vinyl decal business serving small business clients.</li>
+    <li><strong>MandyWagnerDesigns</strong> — Owner / Illustrator | 2021–Present<br />Print-on-demand shop using Printify to sell digital artwork primarily on apparel and posters.</li>
+    <li><strong>StitchCraftsStudios</strong> — Owner / Designer | 2024–Present<br />Passive-income side project selling digital cross-stitch patterns and templates.</li>
+  </ul>
+
+  <h3>Education & Certifications</h3>
+  <p><strong>Associate's Degree Coursework</strong> – Software Development & Mobile Networking<br />Chippewa Valley Technical College, Eau Claire, WI (2019)</p>
+  <p><strong>Certifications:</strong></p>
+  <ul>
+    <li>IT Web Development</li>
+    <li>IT Database Specialist</li>
+    <li>IT Java Programmer</li>
+    <li>IT Microsoft .NET Programmer</li>
+    <li>IT User Support Technician</li>
+  </ul>
+
+  <h3>Portfolio & Contact</h3>
+  <p>Portfolio: <a href="http://www.MandyWagner.Me">www.MandyWagner.Me</a><br />
+  Email: <a href="mailto:mandy.wagner.m@gmail.com">mandy.wagner.m@gmail.com</a><br />
+  LinkedIn: <a href="https://linkedin.com/in/mandymwagner">linkedin.com/in/mandymwagner</a><br />
+  Open to full-time or part-time remote roles in graphic design, UI/UX, and digital product design.</p>
+</section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you'd like to work together, reach out any time:</p>
+    <p>Email: <a href="mailto:mandy.wagner.m@gmail.com">mandy.wagner.m@gmail.com</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/mandywagnerdesigns">@mandywagnerdesigns</a></p>
+    <div class="etsy-grid">
+      <div class="etsy-box">
+        <div class="etsy-preview" style="background-image: url('images/pennyco.png');"></div>
+        <h3>ThePennyCo</h3>
+        <p>Custom vinyl decals, product labels, and packaging solutions for small businesses.</p>
+        <a href="https://www.etsy.com/shop/ThePennyCo" target="_blank">Visit Shop</a>
+      </div>
+      <div class="etsy-box">
+        <div class="etsy-preview" style="background-image: url('images/mwd1.png');"></div>
+        <h3>MandyWagnerDesigns</h3>
+        <p>Print-on-demand apparel and posters featuring hand-drawn illustrations and custom artwork.</p>
+        <a href="https://www.etsy.com/shop/MandyWagnerDesigns" target="_blank">Visit Shop</a>
+      </div>
+      <div class="etsy-box">
+        <div class="etsy-preview" style="background-image: url('images/loon-8.png');"></div>
+        <h3>StitchCraftsStudios</h3>
+        <p>Digital cross-stitch pattern PDFs in modern, minimalist, and nature-inspired styles.</p>
+        <a href="https://www.etsy.com/shop/StitchCraftsStudios" target="_blank">Visit Shop</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mandy Wagner. All rights reserved.</p>
+  </footer>
+</body>
+</html>
