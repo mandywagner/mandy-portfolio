@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap7CFSx2Ff2HbT35mRoBdR9cTXckK2UghDLR3PqPOz0c/YpU5dKUly0GBq3He+9+xQ0xWcruHJvN5GkBFMu6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
       --beige: #f5f3ef;
@@ -33,7 +34,7 @@
     header {
       text-align: center;
       margin-bottom: 3rem;
-    } 
+    }
 
     header h1 {
       font-family: var(--font-heading);
@@ -64,6 +65,14 @@
       margin-bottom: 1rem;
       border-bottom: 2px solid var(--green);
       padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      color: var(--green);
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-family: var(--font-heading);
     }
 
     .gallery {
@@ -120,7 +129,7 @@
     .etsy-box a {
       display: inline-block;
       background-color: var(--green);
-      color: white;
+      color: white !important;
       padding: 0.75rem 1.5rem;
       border-radius: 30px;
       text-decoration: none;
@@ -133,44 +142,194 @@
       background-color: #5c7855;
     }
 
+    .etsy-socials {
+      margin-top: 1rem;
+    }
+
+    .etsy-socials a {
+      color: var(--green);
+      margin: 0 0.4rem;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .etsy-socials a:hover {
+      color: #5c7855;
+    }
+
+    section#resume {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    section#resume ul {
+      margin-left: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    section#resume p,
+    section#resume li {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    section#resume p strong {
+      color: var(--green);
+    }
+
+    section#contact {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-top: 3rem;
+    }
+
+    section#contact h2 {
+      border: none;
+      padding-bottom: 0;
+    }
+
+    section#contact p {
+      margin: 0.75rem 0;
+      font-size: 1rem;
+    }
+
+    section#contact a {
+      color: var(--green);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    section#contact a:hover {
+      border-color: var(--green);
+      color: #5c7855;
+    }
+
     footer {
       text-align: center;
       margin-top: 4rem;
       font-size: 0.9rem;
     }
-    h3 {
-    color: var(--green);
-    font-size: 1.3rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-family: var(--font-heading);
-  }
 
-  section#resume {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  }
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: var(--green);
+      color: white;
+      font-size: 24px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
 
-  section#resume ul {
-    margin-left: 1.25rem;
-    margin-bottom: 1rem;
-  }
+    #backToTop:hover {
+      background-color: #5c7855;
+    }
 
-  section#resume p,
-  section#resume li {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
+    #popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
 
-  section#resume p strong {
-    color: var(--green);
-  }
-</style>
+    #popupContent {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 500px;
+      font-size: 1rem;
+      color: var(--dark);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    #popup button {
+      margin-top: 1rem;
+      background-color: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #popup button:hover {
+      background-color: #5c7855;
+    }
+    form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label {
+      margin: 0.5rem 0 0.25rem;
+      font-weight: 600;
+      color: var(--green);
+    }
+
+    form input,
+    form textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    form button {
+      background-color: var(--green);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      align-self: flex-start;
+    }
+
+    form button:hover {
+      background-color: #5c7855;
+    }
+      
+    .gallery img,
+    .etsy-preview {
+      border-radius: 8px;
+    }
+      
+  </style>
 </head>
 <body>
+  <div id="popup">
+    <div id="popupContent">
+      <p>By viewing this content, you agree not to contact any of the brands or clients featured on this website. All work is presented for portfolio and illustrative purposes only. Unauthorized reproduction, redistribution, or solicitation is strictly prohibited.</p>
+      <button onclick="agreeToTerms()">I Agree to These Terms</button>
+    </div>
+  </div>
+
   <header>
     <h1>Mandy Wagner</h1>
     <p>Graphic Designer | Brand Specialist | Developer</p>
@@ -180,6 +339,7 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
+
 
   <section id="portfolio">
     <h2>Portfolio</h2>
@@ -314,17 +474,31 @@
   </ul>
 
   <h3>Portfolio & Contact</h3>
-  <p>Portfolio: <a href="http://www.MandyWagner.Me">www.MandyWagner.Me</a><br />
-  Email: <a href="mailto:mandy.wagner.m@gmail.com">mandy.wagner.m@gmail.com</a><br />
+  <p>Email: <a href="mailto:mandy.wagner.m@gmail.com">mandy.wagner.m@gmail.com</a><br />
   LinkedIn: <a href="https://linkedin.com/in/mandymwagner">linkedin.com/in/mandymwagner</a><br />
   Open to full-time or part-time remote roles in graphic design, UI/UX, and digital product design.</p>
 </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>If you'd like to work together, reach out any time:</p>
-    <p>Email: <a href="mailto:mandy.wagner.m@gmail.com">mandy.wagner.m@gmail.com</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/mandywagnerdesigns">@mandywagnerdesigns</a></p>
+ <section id="contact">
+  <h2>Contact</h2>
+  <p>If you'd like to work together, reach out any time:</p>
+  <p>Email: <a href="mailto:mandy.wagner.m@gmail.com">mandy.wagner.m@gmail.com</a></p>
+  <p>Instagram: <a href="https://www.instagram.com/_mwdesignss">@mandywagnerdesigns</a></p>
+
+  <form action="mailto:mandy.wagner.m@gmail.com" method="POST" enctype="text/plain">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+ <section>     
     <div class="etsy-grid">
       <div class="etsy-box">
         <div class="etsy-preview" style="background-image: url('images/pennyco.png');"></div>
@@ -334,7 +508,7 @@
       </div>
       <div class="etsy-box">
         <div class="etsy-preview" style="background-image: url('images/mwd1.png');"></div>
-        <h3>MandyWagnerDesigns</h3>
+        <h3>Mandy Wagner Designs</h3>
         <p>Print-on-demand apparel and posters featuring hand-drawn illustrations and custom artwork.</p>
         <a href="https://www.etsy.com/shop/MandyWagnerDesigns" target="_blank">Visit Shop</a>
       </div>
@@ -348,7 +522,22 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Mandy Wagner. All rights reserved. 1</p>
+    <p>&copy; 2025 Mandy Wagner. All rights reserved.</p>
   </footer>
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">&uarr;</button>
+  <script>
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'flex';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+
+    function agreeToTerms() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
