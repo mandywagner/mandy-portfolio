@@ -16,7 +16,24 @@
       --font-heading: 'Libre Baskerville', serif;
       --font-body: 'Work Sans', sans-serif;
     }
+@media (prefers-color-scheme: dark) {
+  body, html {
+    background-color: var(--beige) !important;
+    color: var(--dark) !important;
+  }
 
+  a, a:visited {
+    color: var(--dark) !important;
+  }
+
+  .etsy-box,
+  section#resume,
+  section#contact,
+  #popupContent {
+    background-color: white !important;
+    color: var(--dark) !important;
+  }
+}
     * {
       margin: 0;
       padding: 0;
