@@ -196,7 +196,25 @@
     section#resume p strong {
       color: var(--green);
     }
+      
+    .download-resume {
+      display: inline-block;
+      float: right;
+      margin-top: -.6rem;
+      background-color: var(--green);
+      color: white !important;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
 
+    .download-resume:hover {
+      background-color: #5c7855;
+    }
+
+      
     section#contact {
       background-color: #fff;
       padding: 2rem;
@@ -335,6 +353,10 @@
     .gallery img,
     .etsy-preview {
       border-radius: 8px;
+    }   
+      
+    form button:hover {
+      background-color: #5c7855;
     }
       
   </style>
@@ -420,8 +442,11 @@
 </div>
   </section>
 
-  <section id="resume">
+<section id="resume">
+<!-- insert resume file here to download -->
+  <a class="download-resume" href="resume.pdf" download>Download PDF</a>
   <h2>Resume</h2>
+
   <p><strong>Name:</strong> Mandy Wagner</p>
   <p><strong>Location:</strong> Winter Park, FL</p>
   <p><strong>Email:</strong> mandy.wagner.m@gmail.com</p>
