@@ -119,15 +119,19 @@
       margin-top: 1.5rem;
     }
 
-    .etsy-box {
-      background-color: white;
-      border: 1px solid #ccc;
-      padding: 1.5rem;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+.etsy-box {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Make the box fill the available height */
+}
+
 
     .etsy-box:hover {
       transform: translateY(-5px);
@@ -153,6 +157,7 @@
       font-weight: bold;
       margin-top: 0.5rem;
       transition: background-color 0.3s;
+      margin-top: auto; /* Pushes the button to the bottom */
     }
 
     .etsy-box a:hover {
@@ -527,7 +532,7 @@
     <div class="etsy-grid">
       <div class="etsy-box">
         <div class="etsy-preview" style="background-image: url('images/pennyco.png');"></div>
-        <h3>ThePennyCo</h3>
+        <h3>The Penny Co</h3>
         <p>Custom vinyl decals, product labels, and packaging solutions for small businesses.</p>
         <a href="https://www.etsy.com/shop/ThePennyCo" target="_blank">Visit Shop</a>
       </div>
@@ -539,7 +544,7 @@
       </div>
       <div class="etsy-box">
         <div class="etsy-preview" style="background-image: url('images/loon-8.png');"></div>
-        <h3>StitchCraftsStudios</h3>
+        <h3>Stitch Crafts Studios</h3>
         <p>Digital cross-stitch pattern PDFs in modern, minimalist, and nature-inspired styles.</p>
         <a href="https://www.etsy.com/shop/StitchCraftsStudios" target="_blank">Visit Shop</a>
       </div>
