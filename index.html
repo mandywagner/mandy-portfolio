@@ -363,7 +363,21 @@
     form button:hover {
       background-color: #5c7855;
     }
-      
+.photo-banner {
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.photo-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+ 
   </style>
 </head>
 <body>
@@ -373,6 +387,9 @@
       <button onclick="agreeToTerms()">I Agree to These Terms</button>
     </div>
   </div>
+<div class="photo-banner">
+  <img src="images/mwdesigns-banner.png" alt="Banner image drift wood" />
+</div>
 
   <header>
     <h1>Mandy Wagner</h1>
