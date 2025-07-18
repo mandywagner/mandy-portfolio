@@ -163,5 +163,24 @@ nav a:hover {
 
   
   </section>
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">&uarr;</button>
+  <script>
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'flex';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+
+    function agreeToTerms() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  function toggleMenu() {
+    const nav = document.getElementById('mainNav');
+    nav.classList.toggle('hidden');
+  }
+  </script>  
 </body>
 </html>
