@@ -155,7 +155,18 @@ nav a:hover {
     <h3>Interested in working together?</h3>
     <p><a href="mailto:mandy.wagner.m@gmail.com">mandy.wagner.m@gmail.com</a></p>
 
+  <script>   
+    
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'flex';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
   
+  </script>
   </section>
 </body>
 </html>
