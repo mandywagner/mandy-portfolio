@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon | Mandy Wagner Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    :root {
+      --beige: #f5f3ef;
+      --green: #6e8b63;
+      --dark: #2b2b2b;
+      --font-heading: 'Libre Baskerville', serif;
+      --font-body: 'Work Sans', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background-color: var(--beige);
+      color: var(--dark);
+    }
+
+    .banner img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      display: block;
+    }
+
+    header {
+      position: relative;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    header h1 {
+      font-family: var(--font-heading);
+      color: var(--green);
+      font-size: 2.5rem;
+    }
+
+    .menu-container {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+
+    .menu-toggle {
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: var(--green);
+      cursor: pointer;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 3.5rem;
+      left: 1rem;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--dark);
+      text-decoration: none;
+      margin: 0.5rem 0;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #5c7855;
+    }
+
+    nav.show {
+      display: flex;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      color: var(--green);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: var(--green);
+      color: white;
+      font-size: 24px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    #backToTop:hover {
+      background-color: #5c7855;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <img src="images/mwdesigns-banner.png" alt="Banner">
+  </div>
+
+  <header>
+    <div class="menu-container">
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="logos.html">Logos</a>
+        <a href="linework.html">Line Work</a>
+        <a href="posters.html">Posters</a>
+        <a href="products.html">Products</a>
+        <a href="branding.html">Brand Collateral</a>
+        <a href="labels.html">Product Labels</a>
+        <a href="websites.html">Websites</a>
+        <a href="social.html">Social Media</a>
+      </nav>
+    </div>
+    <h1>Page Coming Soon</h1>
+  </header>
+
+  <section>
+    <h2>Thank you for your patience!</h2>
+    <p>This page hasn’t been updated just yet — but don’t worry, new content is coming soon. I’m currently working behind the scenes to upload designs.</p>
+    <p>Please check back soon or explore other sections of my portfolio in the meantime.</p>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">&uarr;</button>
+
+  <script>
+    // Show/hide back to top button
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    });
+
+    // Toggle menu
+    function toggleMenu() {
+      const nav = document.getElementById('mainNav');
+      nav.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
