@@ -4,10 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Line Work | Mandy Wagner Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap7CFSx2Ff2HbT35mRoBdR9cTXckK2UghDLR3PqPOz0c/YpU5dKUly0GBq3He+9+xQ0xWcruHJvN5GkBFMu6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
   <style>
     :root {
       --beige: #f5f3ef;
@@ -19,15 +17,23 @@
 
     body {
       margin: 0;
-      padding: 2rem;
       font-family: var(--font-body);
       background-color: var(--beige);
       color: var(--dark);
     }
 
+    .banner img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      display: block;
+      
+    }
+
     header {
+      position: relative;
       text-align: center;
-      margin-bottom: 3rem;
+      padding: 2rem;
     }
 
     header h1 {
@@ -36,10 +42,52 @@
       font-size: 2.5rem;
     }
 
+    .menu-container {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+
+    .menu-toggle {
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: var(--green);
+      cursor: pointer;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 3.5rem;
+      left: 1rem;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--dark);
+      text-decoration: none;
+      margin: 0.5rem 0;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #5c7855;
+    }
+
+    nav.show {
+      display: flex;
+    }
+
     section {
       max-width: 1000px;
-      margin: 0 auto;
-      margin-bottom: 3rem;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
 
     h2 {
@@ -56,14 +104,6 @@
       gap: 1rem;
     }
 
-    .gallery .item {
-      background-color: #fff;
-      border: 1px solid #ccc;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    }
-
     .gallery img {
       width: 100%;
       border-radius: 8px;
@@ -71,22 +111,12 @@
     }
 
     .cta {
-      background-color: #fff;
+      background-color: white;
       padding: 2rem;
       text-align: center;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    .cta h3 {
-      font-family: var(--font-heading);
-      color: var(--green);
-      margin-bottom: 1rem;
-    }
-
-    .cta p {
-      margin: 0.5rem 0;
-      font-size: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-top: 3rem;
     }
 
     .cta a {
@@ -98,26 +128,12 @@
       text-decoration: none;
       border-radius: 30px;
       font-weight: bold;
-      transition: background-color 0.3s;
     }
 
     .cta a:hover {
       background-color: #5c7855;
     }
-      
-nav a {
-  margin: 0 0.75rem;
-  text-decoration: none;
-  color: #2b2b2b;
-  font-weight: 600;
-  transition: color 0.3s, border-bottom 0.3s;
-}
 
-nav a:hover {
-  color: #5c7855;
-  border-bottom: 2px solid #6e8b63;
-} 
-  
     #backToTop {
       position: fixed;
       bottom: 20px;
@@ -138,28 +154,33 @@ nav a:hover {
 
     #backToTop:hover {
       background-color: #5c7855;
-    }  
+    }
   </style>
 </head>
 <body>
+
+  <div class="banner">
+    <img src="images/mwdesigns-banner.png" alt="Banner">
+  </div>
+
   <header>
-<div class="menu-container">
-  <button class="menu-toggle" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
-  </button>
-  <nav id="mainNav" class="menu hidden">
-        <a href="index.html">Home</a> 
-        <a href="events.html">Events</a> 
-        <a href="logos.html">Logos</a> 
-        <a href="linework.html">Line work</a> 
-        <a href="posters.html">Posters</a> 
-        <a href="products.html">Products</a> 
-        <a href="branding.html">Brand Collateral</a> 
-        <a href="labels.html">Product Labels</a> 
-        <a href="websites.html">Websites</a> 
+    <div class="menu-container">
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="logos.html">Logos</a>
+        <a href="linework.html">Line Work</a>
+        <a href="posters.html">Posters</a>
+        <a href="products.html">Products</a>
+        <a href="branding.html">Brand Collateral</a>
+        <a href="labels.html">Product Labels</a>
+        <a href="websites.html">Websites</a>
         <a href="social.html">Social Media</a>
-  </nav>
-</div>
+      </nav>
+    </div>
     <h1>Line Work Portfolio</h1>
   </header>
 
@@ -199,26 +220,27 @@ nav a:hover {
     <div class="item"><img src="images/lines/28.png" alt="Logo 2"></div>
   </section>
 
-  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">&uarr;</button>
-
   <section class="cta">
     <h3>Interested in working together?</h3>
     <p><a href="mailto:mandy.wagner.m@gmail.com">mandy.wagner.m@gmail.com</a></p>
-
-  
   </section>
 
-    <script>   
-    
+  <!-- Back to Top Button -->
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">&uarr;</button>
+
+  <script>
+    // Show/hide back to top button
     const backToTopBtn = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.style.display = 'flex';
-      } else {
-        backToTopBtn.style.display = 'none';
-      }
+      backToTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
     });
-  
+
+    // Toggle menu
+    function toggleMenu() {
+      const nav = document.getElementById('mainNav');
+      nav.classList.toggle('show');
+    }
   </script>
+
 </body>
 </html>
