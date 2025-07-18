@@ -133,11 +133,35 @@
     .cta a:hover {
       background-color: #5c7855;
     }
+
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: var(--green);
+      color: white;
+      font-size: 24px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    #backToTop:hover {
+      background-color: #5c7855;
+    }
   </style>
 </head>
 <body>
 
-
+  <div class="banner">
+    <img src="images/mwdesigns-banner.png" alt="Banner">
+  </div>
 
   <header>
     <div class="menu-container">
@@ -157,10 +181,6 @@
         <a href="social.html">Social Media</a>
       </nav>
     </div>
-    <div class="banner">
-      <img src="images/mwdesigns-banner.png" alt="Banner">
-    </div>
-      
     <h1>Brand Portfolio</h1>
   </header>
 
@@ -185,12 +205,23 @@
     <div class="item"><img src="images/brand/10.png" alt="Logo 5"></div>
     <div class="item"><img src="images/brand/11.png" alt="Logo 2"></div>
   </section>
+
   <section class="cta">
     <h3>Interested in working together?</h3>
     <p><a href="mailto:mandy.wagner.m@gmail.com">mandy.wagner.m@gmail.com</a></p>
   </section>
 
+  <!-- Back to Top Button -->
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">&uarr;</button>
+
   <script>
+    // Show/hide back to top button
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    });
+
+    // Toggle menu
     function toggleMenu() {
       const nav = document.getElementById('mainNav');
       nav.classList.toggle('show');
