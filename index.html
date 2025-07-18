@@ -45,25 +45,47 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: var(--font-body);
-  background-color: var(--beige);
-  color: var(--dark);
-  line-height: 1.6;
-  padding: 2rem;
-}
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background-color: var(--beige);
+      color: var(--dark);
+    }
 
-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
+    .banner img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      display: block;
+      
+    }
 
-header h1 {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  color: var(--green);
-}
+    header {
+      position: relative;
+      text-align: center;
+      padding: 2rem;
+    }
 
+    header h1 {
+      font-family: var(--font-heading);
+      color: var(--green);
+      font-size: 2.5rem;
+    }
+
+    .menu-container {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+
+    .menu-toggle {
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: var(--green);
+      cursor: pointer;
+    }
+    
 section {
   max-width: 900px;
   margin: 2rem auto;
